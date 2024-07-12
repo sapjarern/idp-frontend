@@ -20,7 +20,7 @@ export type UserSchema = {
 const SignUpPage = () => {
 
     const navigate = useNavigate()
-    const [messageApi, contextHolder] = message.useMessage()
+    const [messageApi] = message.useMessage()
 
     const onFinish = async (values: FieldType) => {
         console.log('Debug OnFinish', values)

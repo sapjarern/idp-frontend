@@ -1,19 +1,14 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { getCurrentUser, fetchAuthSession, signOut } from 'aws-amplify/auth';
+import { fetchAuthSession, signOut } from 'aws-amplify/auth';
 
-import { Authenticator } from '@aws-amplify/ui-react';
 import { Amplify } from 'aws-amplify';
 import outputs from '../amplify_outputs.json';
 import '@aws-amplify/ui-react/styles.css';
-import { redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 Amplify.configure(outputs); // try to move to main.tsx
-
-type User = {
-  username: string
-}
 
 function App() {
 

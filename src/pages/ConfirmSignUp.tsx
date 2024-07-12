@@ -4,8 +4,7 @@ import { confirmSignUp, ConfirmSignUpInput } from "aws-amplify/auth"
 import { fetchAuthSession } from "aws-amplify/auth"
 import type { NotificationArgsProps } from 'antd';
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import ConfirmSignUp from "../components/ConfirmSignUpForm";
+import { useNavigate } from "react-router-dom";
 
 
 const ConfirmSignUpPage = () => {
@@ -55,7 +54,7 @@ const ConfirmSignUpPage = () => {
         <div>
             {contextHolder}
             <h1>Confirm</h1>
-            <ConfirmSignUp onFinish={onFinish} />
+            <ConfirmSignUpForm onFinish={onFinish} />
         </div>
     )
 }

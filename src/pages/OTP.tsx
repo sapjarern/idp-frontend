@@ -3,7 +3,7 @@ import OTPForm, {FieldType} from "../components/OTPForm"
 import { fetchAuthSession, confirmSignIn, ConfirmSignInInput } from "aws-amplify/auth"
 import type { NotificationArgsProps } from 'antd';
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const OTPPage = () => {
